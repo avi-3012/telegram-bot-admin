@@ -9,6 +9,7 @@ const SignIn = ({
   setLogin: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const { user, setUserInStore } = useUser();
+  const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID || "";
   const setKey = React.useCallback(async ({credential}:CredentialResponse) => {
     if(!credential) return;
     localStorage.setItem("key", credential);
@@ -50,7 +51,7 @@ const SignIn = ({
         }}
       >
 
-      <GoogleOAuthProvider clientId="318034402479-ircv3lou712r9b9fi1u3j6pmhvtjre6c.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId={googleClientId}>
         <GoogleLogin onSuccess={setKey} onError={console.error} />
       </GoogleOAuthProvider>
       </div>

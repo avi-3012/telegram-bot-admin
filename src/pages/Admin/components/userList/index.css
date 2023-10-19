@@ -1,0 +1,55 @@
+.userlist-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.userlist-header{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.userlist-item-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.userlist-item-name{
+    width: 25%;
+}
+
+.userlist-item-id{
+    width: 25%;
+}
+
+.block-button{
+    margin-left: 15px;
+    border: none;
+    background-color: #ff4000;
+    padding: 2px;
+    font-size: 10px;
+    color: white;
+    width: 80px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #ff0000;
+}
+
+.block-button:hover{
+    background-color: #ff1500;
+}
+
+.block-button:active{
+    background-color: #ff0000;
+}
+

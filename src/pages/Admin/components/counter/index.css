@@ -1,0 +1,24 @@
+.counter{
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userCount{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 10px;
+    width: 45%;
+}

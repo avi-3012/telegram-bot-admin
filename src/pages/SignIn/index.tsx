@@ -14,8 +14,10 @@ const SignIn = ({
     if(!credential) return;
     localStorage.setItem("key", credential);
     const response = await signIn(credential);
+    if(!response.data) return;
+    setLogin(true);
     setUserInStore(response.data);
-  }, [setUserInStore]);
+  }, [setUserInStore]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (user.name) {

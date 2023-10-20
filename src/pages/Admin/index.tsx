@@ -22,7 +22,7 @@ const Admin = () => {
         <div className="title">Admin Panel</div>
 
         <div className="account">
-          <div className="name" onClick={()=>handleLogOut}>
+          <div className="name" onClick={()=>handleLogOut()}>
             LOG OUT
           </div>
         </div>

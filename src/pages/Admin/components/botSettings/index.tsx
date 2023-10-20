@@ -23,7 +23,7 @@ const BotSettings = () => {
     ).value = "";
   };
 
-  const updateName = () => {
+  const updateName = async () => {
     console.log("update name");
     const token = localStorage.getItem("key");
     console.log(token);
@@ -33,9 +33,10 @@ const BotSettings = () => {
     ).value;
     console.log(name);
     if (!name) return;
-    const response = updateBotName(token, name)
+    const response = await updateBotName(token, name)
       .then((res) => window.alert("Name updated successfully!"))
       .catch((err) => window.alert("Error updating name!"));
+
     console.log(response);
     (
       document.getElementsByClassName("update-input")[1] as HTMLInputElement
